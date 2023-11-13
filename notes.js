@@ -66,3 +66,19 @@ const course={
 const{courseInstructor:inst}=course  // now we can use inst to access the values anywhere in the code
 
 console.log(inst)
+
+//Working with APIS
+// Sample API is randomuser me api
+//To study this API Use JSON formatter
+
+
+// Arrow Functions
+const add=(num1,num2)=>{
+  return num1+num2
+}
+console.log(add(11,13))
+
+const addthree=(num1,num2,num3)=>num1+num2+num3
+
+console.log(addthree(5,15,20))
+
