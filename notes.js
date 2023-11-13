@@ -77,8 +77,17 @@ const add=(num1,num2)=>{
   return num1+num2
 }
 console.log(add(11,13))
-
+// Here need not write return keyword as we are not using {} braces in the function
 const addthree=(num1,num2,num3)=>num1+num2+num3
 
-console.log(addthree(5,15,20))
+console.log(addthree(5,15,20));
+
+//IIFE(IMMEDIATELY INVOKED FUNCTION EXPRESSION)
+(function chai(){
+  console.log(`DB CONNECTED`);
+})(); // Semi colon is to end the scope of this function because it does not know till where to execute
+
+(()=>{
+  console.log(`DB CONNECTED2`)
+})()
 
