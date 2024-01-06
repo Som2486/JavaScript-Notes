@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MY LEARNINGS</title>
+</head>
+<body>
+    <ul class="language">
+        <li>
+            Javascript
+        </li>
+    </ul>
+</body>
+<script>
+    /* This method of doing is a correct approach but not optimmized as not a good 
+    practice if list is very large.
+    Need to traverse whole tree*/
+    function addLanguage(langName){
+        const li=document.createElement('li');
+        li.innerHTML=`${langName}`
+        document.querySelector('.language' ).
+        appendChild(li)
+    }
+    addLanguage("python")
+    addLanguage("JAVA")
+    addLanguage("SQL")
+
+/* This method of adding items to the list is an optimixed approach*/
+    function addoptiLanguage(langName){
+        const li=document.createElement('li');
+        li.appendChild(document.createTextNode(langName))
+        document.querySelector('.language').appendChild(li)
+    }
+    addoptiLanguage('golang')
+
+
+    //EDIT in the list  1 method
+    const thirdlang=document.querySelector("li:nth-child(3)")
+   thirdlang.innerHTML="React"
+   //Edit in the list 2nd method
+   const newli=document.createElement('li')
+   newli.textContent="MONGODB"
+   thirdlang.replaceWith(newli)
+
+   //Edit in the list 3rd Method
+   const firstlang=document.querySelector("li:nth-child(1)")
+   firstlang.outerHTML='<li> TypeScript</li>'
+
+   //remove
+   const lastLang=document.querySelector('li:last-child')
+   lastLang.remove()
+
+
+</script>
+
+</html>
