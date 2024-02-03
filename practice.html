@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <h1> MY PRACTICE IN DOM</h1>
+</head>
+<body style="background-color: black; color:aqua">
+    <div class="parent">
+        <div class="day">Monday</div>
+        <div class="day">Tuesday</div>
+        <div class="day">Wednesday</div>
+        <div class="day">Thursday</div>
+
+    </div>
+    
+</body>
+<script>
+
+    const hold=document.querySelector('.parent')
+    //console.log(hold);
+    //console.log(hold.children);
+    //console.log(hold.children[2].innerHTML)
+
+    hold.children[0].style.color="pink"
+    hold.children[1].style.color="yellow"
+    hold.children[2].style.color="orange"
+    //console.log(hold.firstElementChild)
+    //console.log(hold.lastElementChild)
+
+    const day1=document.querySelector('.day')
+    console.log(day1.parentElement)
+    console.log(day1.nextElementSibling)
+    
+    
+    
+</script>
+</html>

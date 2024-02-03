@@ -87,7 +87,14 @@ console.log(addthree(5,15,20));
   console.log(`DB CONNECTED`);
 })(); // Semi colon is to end the scope of this function because it does not know till where to execute
 
+
+// ARROW FUNCTIONS CAN ALSO BE USED IN IIFE
 (()=>{
   console.log(`DB CONNECTED2`)
 })()
+
+
+// falsy values
+
+false,0,-0, null,undefined, NaN,BigInt,""
 
