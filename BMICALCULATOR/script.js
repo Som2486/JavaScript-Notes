@@ -8,7 +8,7 @@ form.addEventListener('submit', function (e) {
   const height = parseInt(document.querySelector('#height').value);
   const weight = parseInt(document.querySelector('#weight').value);
   const results = document.querySelector('#results')
-  const message = document.querySelector('#message');
+  const msg = document.querySelector('#msg');
 
   if (height === '' || height < 0 || isNaN(height)) {
     results.innerHTML = `Please give a valid height ${height}`;
@@ -20,15 +20,15 @@ form.addEventListener('submit', function (e) {
     results.innerHTML = `<span>${bmi}</span>`;
     if(bmi>24.9)
     {
-      message.innerHTML=`<span> ${"Over Weight"}</span`;
+      msg.innerHTML=`<span> ${"Over Weight"}</span`;
 
     }
     else if(bmi<17.5)
     {
-      message.innerHTML=`<span> ${"Under Weight"}</span`;
+      msg.innerHTML=`<span> ${"Under Weight"}</span`;
     }
     else{
-      message.innerHTML=`<span> ${"Normal Weight"}</span`;
+      msg.innerHTML=`<span> ${"Normal Weight"}</span`;
     }
     
   }
