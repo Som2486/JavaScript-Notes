@@ -16,6 +16,12 @@
     const changetxt=function(){
         document.querySelector('h1').innerHTML="My girlfriend is the best"
     }
-    setTimeout(changetxt,5000)
+    const changeme=setTimeout(changetxt,5000)
+
+    document.querySelector("#stop").addEventListener('click', function(){
+        clearTimeout(changeme)
+        console.log("stopped")
+        
+    })
 </script>
 </html>
